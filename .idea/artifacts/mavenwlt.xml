@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mavenwlt">
+    <output-path>$PROJECT_DIR$/out/artifacts/mavenwlt</output-path>
+    <root id="archive" name="mavenwlt.war" />
+  </artifact>
+</component>
