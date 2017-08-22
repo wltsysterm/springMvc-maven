@@ -33,12 +33,15 @@
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>3.1.0</version>
+      <!--编译的时候使用，设置为provided范围，目的是运行的时候不用这个jar，因为tomcat plugin也有这个jar，会冲突的-->
+      <scope>provided</scope>
     </dependency>
-    <dependency>
+    <!--注释掉，不然跟tomcat plugin的jar冲突-->
+<!--    <dependency>
       <groupId>javax.servlet.jsp</groupId>
       <artifactId>jsp-api</artifactId>
       <version>2.2</version>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
@@ -59,5 +62,21 @@
 
   <build>
     <finalName>springMvcMaven</finalName>
+    <pluginManagement>
+      <plugins>
+        <!-- 配置Tomcat插件 -->
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.1</version>
+        <configuration>
+          <port>9090</port>
+          <path>/</path>
+          <uriEncoding>UTF-8</uriEncoding>
+          <server>tomcat7</server>
+        </configuration>
+      </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>
