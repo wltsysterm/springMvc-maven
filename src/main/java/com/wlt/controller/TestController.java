@@ -17,7 +17,7 @@ public class TestController {
     @ResponseBody
     public void doSomething(){
         System.out.println("11111");
-        logger.error("hahah");
+        logger.debug("hahah");
     }
 
     @RequestMapping("do1")
