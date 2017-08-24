@@ -1,8 +1,7 @@
 package com.wlt.controller;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Value;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,7 +14,8 @@ public class TestController {
     //2、也可以手动设置路径字符串
 //    private Logger logger = Logger.getLogger("com.wlt.controller.TestController");
     //3 log4j2的日志
-    private Logger logger = LogManager.getLogger("com.wlt.controller.TestController");
+//    private Logger logger = LogManager.getLogger("com.wlt.controller.TestController");
+    private Logger logger = LoggerFactory.getLogger(TestController.class);
     @RequestMapping("do")
     @ResponseBody
     public void doSomething(){
