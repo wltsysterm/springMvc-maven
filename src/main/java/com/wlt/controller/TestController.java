@@ -1,6 +1,7 @@
 package com.wlt.controller;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +13,9 @@ public class TestController {
     //1、以当前类.class初始化，会自动将类的全路径作为参数初始化log，那么过滤条件就是以该全路径作为条件，跟配置文件里面的配置做比较
 //    private Logger logger = Logger.getLogger(TestController.class);
     //2、也可以手动设置路径字符串
-    private Logger logger = Logger.getLogger("com.wlt.controller.TestController");
+//    private Logger logger = Logger.getLogger("com.wlt.controller.TestController");
+    //3 log4j2的日志
+    private Logger logger = LogManager.getLogger("com.wlt.controller.TestController");
     @RequestMapping("do")
     @ResponseBody
     public void doSomething(){

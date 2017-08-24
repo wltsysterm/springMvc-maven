@@ -17,7 +17,7 @@
             <!-- 设置日志输出的最大级别 -->
             <param name="levelMax" value="debug" />
             <!-- 设置日志输出的xxx，默认是false 是否反转当前的过滤条件-->
-           <!-- <param name="acceptOnMatch" value="FALSE" />-->
+            <!--<param name="acceptOnMatch" value="FALSE" />-->
         </filter>
     </appender>
 

@@ -22,12 +22,33 @@
       <scope>test</scope>
     </dependency>
     <!--日志包-->
-    <dependency>
+    <!--<dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>1.7.21</version>
-    </dependency>
+    </dependency>-->
 
+    <!--log4j2的日志包 2个：log4j-core log4j-api-->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-web</artifactId>
+      <version>2.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-jcl</artifactId>
+      <version>2.5</version>
+    </dependency>
     <!--j2ee相关包 servlet、jsp、jstl-->
     <dependency>
       <groupId>javax.servlet</groupId>
