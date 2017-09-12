@@ -29,12 +29,12 @@ public class TestController {
         return new ModelAndView("");
     }
 
-    @RequestMapping("do2")
-    @ResponseBody
-    public String doSomething2(){
-        System.out.println("11111");
-        return "测试不返回页面";
-    }
+    //@RequestMapping("do2")
+    //@ResponseBody
+   // public String doSomething2(){
+    //    System.out.println("11111");
+    ///    return "测试不返回页面";
+   // }
 
     @RequestMapping("index")
     public ModelAndView index(){
